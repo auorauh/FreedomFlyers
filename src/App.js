@@ -23,7 +23,7 @@ function App() {
           </div>
           <div>
             <p>
-              Show your patriotism and sign up for the Talega Flag Service: Have an American flag displayed in your front yard for all 5 major patriotic holidays:
+              Show your patriotism and sign up for the Freedom Flyers Flag Service: Have an American flag displayed in your front yard for all 5 major patriotic holidays:
             </p>
             <ul>
               <li>Veterans Day</li>
