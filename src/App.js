@@ -3,6 +3,7 @@ import hero from './Assets/hero.jpg';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from './CheckoutForm';
+import { FaFlagUsa } from "react-icons/fa";
 
 const stripePromise = loadStripe('pk_test_...'); // Replace with your Stripe public key
 
@@ -19,10 +20,18 @@ function App() {
       <div className="Landing">
         <div className="LandingHeader">
           <div className="LandingTitle">Freedom Flyer Flag Service</div>
-            $75 Year
+            $75 / Year
+          </div>
+          Your flag will be proudly displayed for these five major patriotic holidays.
+          <div className="CardContainer">
+            <div className="LandingCard"><FaFlagUsa /> Memorial Day</div>
+            <div className="LandingCard"><FaFlagUsa /> 4th of July</div>
+            <div className="LandingCard"><FaFlagUsa /> Labor Day</div>
+            <div className="LandingCard"><FaFlagUsa /> September 11th</div>
+            <div className="LandingCard"><FaFlagUsa className=""/> Veterans Day</div>
           </div>
           <div>
-            <p>
+            {/* <p>
               Show your patriotism and sign up for the Freedom Flyers Flag Service: Have an American flag displayed in your front yard for all 5 major patriotic holidays:
             </p>
             <ul>
@@ -31,7 +40,7 @@ function App() {
               <li>4th of July</li>
               <li>Labor Day</li>
               <li>September 11th</li>
-            </ul>
+            </ul> */}
             <p>
               Prior to each holiday, your Texas neighbors, <strong>Kamrin, Holland, Blakely</strong>, will install one full-size 3'x5' American flag in your front yard.
             </p>

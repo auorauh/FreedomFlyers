@@ -79,7 +79,7 @@ const CheckoutForm = () => {
             required
             className="stripe-input"
         />
-        <CardElement options={{ hidePostalCode: false }} />
+        <CardElement className="stripe-input" options={{ hidePostalCode: false }} />
         <label className="stripe-checkbox">
             <input type="checkbox" required />
             I agree to recurring charges and the terms of service.

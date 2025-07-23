@@ -15,7 +15,7 @@
 }
 .App {
   font-family: 'Cinzel';
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -42,8 +42,8 @@ header {
 }
 .HeroImg {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* fits entire image, may leave space */
+  height: 50vh;
+  object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 0 0 4px rgb(2, 56, 147),
   0 0 10px 10px rgb(255, 0, 0);
@@ -79,13 +79,38 @@ header {
   flex-direction: column;
 }
 .LandingTitle {
-
+  font-size: 1.25rem;
+}
+.CardContainer {
+  display: flex;
+  gap: 1rem;
+}
+.LandingCard {
+  background-color: #F8FAFC;
+  border-radius: 15px;
+  border: 3px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  margin: 1rem 0;
 }
 .OrderHeader {
   font-size: 3rem;
-  color: red;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.58);
+  color: #DC2626;
 }
 .Checkout {
   width: 100%;
 }
+@media (max-width: 768px) { 
+  .CardContainer {
+    flex-direction: column;
+    gap: .25rem;
+  }
+  .LandingCard {
+    margin: 0;
+    padding: .25rem;
+  }
+ }
