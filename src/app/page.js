@@ -28,15 +28,15 @@ export default function Home() {
         </div>
         Your flag will be proudly displayed for these five major patriotic holidays.
         <div className={styles.CardContainer}>
-          <div className={styles.LandingCard}><FaFlagUsa /> Memorial Day</div>
-          <div className={styles.LandingCard}><FaFlagUsa /> 4th of July</div>
-          <div className={styles.LandingCard}><FaFlagUsa /> Labor Day</div>
-          <div className={styles.LandingCard}><FaFlagUsa /> September 11th</div>
-          <div className={styles.LandingCard}><FaFlagUsa /> Veterans Day</div>
+          <div className={styles.LandingCard}><FaFlagUsa /> <span className={styles.icon}>Memorial Day</span></div>
+          <div className={styles.LandingCard}><FaFlagUsa /> <span className={styles.icon}>4th of July</span></div>
+          <div className={styles.LandingCard}><FaFlagUsa /> <span className={styles.icon}>Labor Day</span></div>
+          <div className={styles.LandingCard}><FaFlagUsa /> <span className={styles.icon}>September 11th</span></div>
+          <div className={styles.LandingCard}><FaFlagUsa /> <span className={styles.icon}>Veterans Day</span></div>
         </div>
           <div className={styles.InfoCard}>
           <h3>How It Works</h3>
-          <p>Your Texas neighbors, <strong>Kamrin, Holland, Blakely</strong>, will install one full-size 3x5 American flag in your front yard before each major holiday.</p>
+          <p>Your Texas neighbors, <strong>Kamrin, Holland, and Blakely</strong>, will install one full-size 3x5 American flag in your front yard before each major holiday.</p>
           <p>Includes careful install, take-down, and safe storage between holidays.</p>
           <p>
             Flag will be installed up to 3 days before each holiday and uninstalled within 3 days after each holiday. <br />

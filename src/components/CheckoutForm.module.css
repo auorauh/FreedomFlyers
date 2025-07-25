@@ -12,12 +12,11 @@
   justify-content: center;
   padding: 2rem;
   margin: 4rem auto;
-  max-width: 400px;
+  width: 50vw;
   /* background: white; */
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     gap: 1rem;
-  max-width: 400px;
   margin: 0 auto;
   padding: 1rem;
 }
@@ -100,9 +99,18 @@
   gap: 0.5rem;
   font-size: 0.9rem;
 }
+.stripeCheckbox input {
+  background-color: #5146e0;
+}
 .spinner {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media (max-width: 768px) { 
+  .formClass {
+    width: 90vw;
+  }
+    
 }
