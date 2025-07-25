@@ -7,7 +7,7 @@ import { Elements } from '@stripe/react-stripe-js';
 import CheckoutForm from '../components/CheckoutForm'
 import { FaFlagUsa } from "react-icons/fa";
 
-const stripePromise = loadStripe('pk_test_51RoD0LRr4Dm6KIbQyNJJ71LRSKHEta0MjXCynNcyXH3acEXLj1dgqF1dE7fcwM1rek7zO2XMkt4s8wB2yY4LdqJZ00yiriq5pK');
+const stripePromise = loadStripe('pk_live_51RoD0C2Lh23AW9B4h6NU3gwwuTZiLKltfEKhurqCkafU7Tgwg9YO1hn2707b3WDnQ1XH5vaZINvDJUKqicK3Uom200nSIRctwt');
 
 export default function Home() {
   return (

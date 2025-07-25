@@ -24,7 +24,7 @@ export async function POST(req) {
       customer: customer.id,
       items: [
         {
-          price: 'price_1RoDQ1Rr4Dm6KIbQckIpTTOy',
+          price: 'price_1RobFy2Lh23AW9B4LzsQgdoN',
           quantity: 1,
         },
       ],
