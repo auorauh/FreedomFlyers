@@ -78,6 +78,7 @@
   border-radius: 5px;
   box-shadow: 0 0 0 4px rgb(2, 56, 147),
   0 0 10px 10px rgb(255, 0, 0);
+  
 }
 .HeroTitle {
   position: absolute;
@@ -88,9 +89,20 @@
   background-color: rgb(2, 56, 147, .5);
   color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 5rem;
+  font-weight: 800;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Oswald';
+}
+.gradientText {
+  font-weight: 800;
+  background: linear-gradient(90deg, #3366FF, #7F3FBF, #E60000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px;
 }
 .Landing {
   font-family: 'Oswald';
@@ -205,7 +217,10 @@
   }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
+  .HeroTitle {
+    font-size: 3rem;
+  }
   .CardContainer {
     flex-direction: column;
     gap: .5rem;

@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_live_51RoD0C2Lh23AW9B4h6NU3gwwuTZiLKltfEKhu
 export default function Home() {
   return (
         <div className={styles.App}>
-      <div className={styles.Header}>Freedom Flyers</div>
+      {/* <div className={styles.Header}>Freedom Flyers</div> */}
 
       <div className={styles.Hero}>
         <div className={styles.HeroContainer}>
