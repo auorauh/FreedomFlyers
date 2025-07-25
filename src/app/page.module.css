@@ -15,6 +15,22 @@
   gap: 64px;
   font-family: var(--font-geist-sans);
 }
+@font-face {
+  font-family: 'Oswald';
+  src: url('../../public/Fonts/Oswald-Regular.woff2') format('woff2'),
+       url('../../public/Fonts/Oswald-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../../public/Fonts/Cinzel-VariableFont_wght.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 /* @media (prefers-color-scheme: dark) {
   .page {
@@ -116,6 +132,7 @@
 .OrderHeader {
   font-size: 3rem;
   color: #DC2626;
+  font-family: 'Oswald';
 }
 .Checkout {
   width: 100%;

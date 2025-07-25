@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import hero from '../../public/hero.jpg'
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-import CheckoutForm from '../../components/CheckoutForm'
+import CheckoutForm from '../components/CheckoutForm'
 import { FaFlagUsa } from "react-icons/fa";
 
 const stripePromise = loadStripe('pk_test_51RoD0LRr4Dm6KIbQyNJJ71LRSKHEta0MjXCynNcyXH3acEXLj1dgqF1dE7fcwM1rek7zO2XMkt4s8wB2yY4LdqJZ00yiriq5pK');
@@ -57,6 +57,7 @@ export default function Home() {
             <strong>We are proud to be American!!</strong>
           </p>
           <p>Thank you for your support.</p>
+          <p>To Update your payment method, or cancel Please Contact us at valdez@freedomflyers.co</p>
         </div>
       </div>
 

@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   CardElement,
   useStripe,
   useElements,
 } from '@stripe/react-stripe-js';
-import './CheckoutForm.css';
+import styles from './CheckoutForm.module.css';
+import Spinner from './Spinner';
 
 const CheckoutForm = () => {
+  const [loading, setLoading] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     if (!stripe || !elements) return;
 
@@ -36,11 +39,12 @@ const CheckoutForm = () => {
 
     if (error) {
       console.error(error.message);
+      setLoading(false);
       alert(error.message);
       return;
     }
 
-    const res = await fetch('https://your-backend.com/subscribe', {
+    const res = await fetch('/api/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -54,78 +58,94 @@ const CheckoutForm = () => {
 
     const data = await res.json();
 
-    if (data.error) {
-      alert(data.error.message);
-      return;
-    }
 
-    const confirmRes = await stripe.confirmCardPayment(data.clientSecret);
-    if (confirmRes.error) {
-      console.error(confirmRes.error.message);
-      alert(confirmRes.error.message);
-    } else {
-      alert('Subscription successful!');
-    }
+if (data.error) {
+  setLoading(false);
+  alert(data.error.message || data.error);
+  return;
+}
+
+if (data.clientSecret) {
+  const confirmRes = await stripe.confirmCardPayment(data.clientSecret);
+  if (confirmRes.error) {
+    setLoading(false);
+    alert(confirmRes.error.message);
+  } else {
+    setLoading(false);
+    alert('Subscription successful!');
+  }
+} else if (data.message) {
+  // No payment confirmation needed, subscription is active
+  setLoading(false);
+  alert(data.message);
+} else {
+  setLoading(false);
+  alert('Unexpected response from server.');
+}
   };
 
   return (
-    <form className="stripe-form" onSubmit={handleSubmit}>
+    <div className={styles.CheckoutForm}>
+    {loading ? <div className={styles.spinner}><Spinner /> </div> : <></>}
+    
+    <form className={styles.formClass} onSubmit={handleSubmit}>
       <input
         type="text"
         name="name"
         placeholder="Full Name"
         required
-        className="stripe-input"
+        className={styles.stripeInput}
       />
       <input
         type="email"
         name="email"
         placeholder="Email Address"
         required
-        className="stripe-input"
+        className={styles.stripeInput}
       />
       <input
         type="tel"
         name="phone"
         placeholder="Phone Number"
         required
-        className="stripe-input"
+        className={styles.stripeInput}
       />
       <input
         type="text"
         name="address"
         placeholder="Street Address"
         required
-        className="stripe-input"
+        className={styles.stripeInput}
       />
       <input
         type="text"
         name="city"
         placeholder="City"
         required
-        className="stripe-input"
+        className={styles.stripeInput}
       />
       <input
         type="text"
         name="state"
         placeholder="State"
         required
-        className="stripe-input"
+        className={styles.stripeInput}
       />
       <input
         type="text"
         name="zip"
         placeholder="ZIP Code"
         required
-        className="stripe-input"
+        className={styles.stripeInput}
       />
-      <CardElement className="stripe-input" options={{ hidePostalCode: false }} />
-      <label className="stripe-checkbox">
+      <CardElement className={styles.stripeInput} options={{ hidePostalCode: false }} />
+      <label className={styles.stripeCheckbox}>
         <input type="checkbox" required />
         I agree to recurring charges and the terms of service.
       </label>
-      <button type="submit" className="stripe-button">Subscribe</button>
+      <button type="submit" className={styles.stripeButton}>Subscribe</button>
     </form>
+    </div>
   );
 };
 

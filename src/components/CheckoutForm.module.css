@@ -1,4 +1,11 @@
-form {
+.CheckoutForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.formClass {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,9 +13,13 @@ form {
   padding: 2rem;
   margin: 4rem auto;
   max-width: 400px;
-  background: white;
+  /* background: white; */
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .StripeElement {
@@ -21,7 +32,7 @@ form {
   margin-bottom: 1rem;
 }
 
-button {
+.button {
   padding: 12px 20px;
   background-color: #1a73e8;
   color: white;
@@ -32,19 +43,20 @@ button {
   transition: background 0.3s ease;
 }
 
-button:hover {
+.button:hover {
   background-color: #0f5dd0;
 }
-.stripe-form {
+.stripeForm {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   max-width: 400px;
   margin: 0 auto;
   padding: 1rem;
+  color: black;
 }
 
-.stripe-input {
+.stripeInput {
   padding: 0.75rem 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -54,18 +66,19 @@ button:hover {
   width: 100%;
   box-sizing: border-box;
   transition: border-color 0.2s ease;
+  color: black;
 }
-.stripe-cardInput {
+.stripeCardInput {
     width: 100%;
 }
 
-.stripe-input:focus {
+.stripeInput:focus {
   border-color: #635bff; /* Stripe purple */
   outline: none;
   box-shadow: 0 0 0 1px #635bff;
 }
 
-.stripe-button {
+.stripeButton {
   padding: 0.75rem 1rem;
   background-color: #635bff;
   color: white;
@@ -77,14 +90,19 @@ button:hover {
   transition: background-color 0.2s ease;
 }
 
-.stripe-button:hover {
+.stripeButton:hover {
   background-color: #5146e0;
 }
 
-.stripe-checkbox {
+.stripeCheckbox {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: #333;
+}
+.spinner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
