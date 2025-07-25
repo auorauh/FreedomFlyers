@@ -8,7 +8,6 @@ import CheckoutForm from '../components/CheckoutForm'
 import { FaFlagUsa } from "react-icons/fa";
 
 const stripePromise = loadStripe('pk_live_51RoD0C2Lh23AW9B4h6NU3gwwuTZiLKltfEKhurqCkafU7Tgwg9YO1hn2707b3WDnQ1XH5vaZINvDJUKqicK3Uom200nSIRctwt');
-
 export default function Home() {
   return (
         <div className={styles.App}>
