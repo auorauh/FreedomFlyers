@@ -38,16 +38,11 @@ export default function Home() {
           <h3>How It Works</h3>
           <p>Your Texas neighbors, <strong>Kamrin, Holland, and Blakely</strong>, will install one full-size 3x5 American flag in your front yard before each major holiday.</p>
           <p>Includes careful install, take-down, and safe storage between holidays.</p>
-          <p>
-            Flag will be installed up to 3 days before each holiday and uninstalled within 3 days after each holiday. <br />
-            Labor Day flag will stay up until the 9/11 holiday.
-          </p>
         </div>
         <div className={styles.InfoCard}>
-          <h3>Subscription</h3>
-          <p><strong>$75 annually</strong> for full flag service.</p>
-          <p>Service starts immediately — your flag will be up for the next holiday.</p>
-          <p>Cancel anytime.</p>
+          <h3>Holiday Schedule</h3>
+          <p>Flags will be placed up to <strong>3 days before</strong> each holiday and removed within <strong>3 days after</strong>.</p>
+          <p>Labor Day flags remain through <strong>September 11th</strong>.</p>
         </div>
         <div className={styles.InfoCard}>
           <h3>Share the Pride</h3>
